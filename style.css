@@ -1,0 +1,141 @@
+/* 全体のスタイル*/
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+}
+
+p {
+    display: inline-block;
+}
+
+a {
+    color: #75af57;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+/* ヘッダーのデザイン */
+nav ul {
+    background: #1b9aaa;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a, nav ul a {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+nav ul a {
+    color: black;
+    font-weight: bold;
+    float: left;
+    font-size: 18px;
+}
+nav ul li a::first-line {
+    font-size: 16px;
+    font-weight: bold;
+}
+nav ul li a:hover, nav ul a:hover {
+    background: #14727e;
+}
+@media screen and (min-width: 992px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+    nav ul li a::first-line {
+        font-size: 22px;
+    }
+    nav ul a {
+        font-size: 24px;
+    }
+}
+
+/* ハンバーガーメニューのスタイル */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5em;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.menu-toggle.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu-toggle.change .bar2 {
+    opacity: 0;
+}
+
+.menu-toggle.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(27, 154, 170, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        padding: 1em;
+        font-size: 16px;
+    }
+}
