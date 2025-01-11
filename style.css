@@ -45,7 +45,7 @@ button {
     background-color: #1b9aaa;
     color: #fff;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 15px 30px;
     border: none;
     display: block;
@@ -61,7 +61,7 @@ button {
         font-size: 1.5rem;
     }
     button {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -73,7 +73,7 @@ button {
         font-size: 2rem;
     }
     button {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 }
 
