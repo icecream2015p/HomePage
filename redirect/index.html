@@ -1,1 +1,13 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>リダイレクト</title>
+    </head>
+    <body>
+        <noscript>JavaScriptをONにして下さい</noscript>
+        <script async>
+            location.href = "https://www.icecream2015p.com/redirect/?url=" + (new URL(location.href)).searchParams.get('url');
+        </script>
+    </body>
+</html>
